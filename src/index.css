@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(16, 185, 129, 0.06), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(168, 85, 247, 0.05), transparent 60%),
+      #fafaf9;
+  }
+  html.dark body {
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(34, 197, 94, 0.06), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(168, 85, 247, 0.05), transparent 60%),
+      #09090b;
+  }
+  code,
+  kbd,
+  pre,
+  .mono {
+    font-family:
+      "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  /* thinner scrollbars for the terminal feel */
+  *::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border-radius: 9999px;
+  }
+  html.dark *::-webkit-scrollbar-thumb {
+    background: #27272a;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #a1a1aa;
+  }
+  html.dark *::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-stone-200 bg-white/80 backdrop-blur
+           shadow-[0_1px_0_0_rgba(0,0,0,0.02)_inset]
+           dark:border-zinc-800/80 dark:bg-zinc-900/60
+           dark:shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset];
+  }
+  .card-head {
+    @apply flex items-center gap-3 border-b border-stone-200 px-4 py-3
+           dark:border-zinc-800/80;
+  }
+  .input {
+    @apply w-full rounded-md border border-stone-300 bg-white px-3 py-2
+           text-sm font-mono text-stone-900 placeholder:text-stone-400
+           focus:border-emerald-500/60 focus:outline-none focus:ring-1 focus:ring-emerald-500/40
+           dark:border-zinc-800 dark:bg-zinc-950/60 dark:text-zinc-100 dark:placeholder:text-zinc-600;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1 rounded-md border border-stone-200
+           bg-white/70 px-2 py-0.5 text-[11px] font-mono text-stone-600
+           dark:border-zinc-800 dark:bg-zinc-950/60 dark:text-zinc-400;
+  }
+  .btn {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-stone-200
+           bg-white px-2.5 py-1.5 text-xs font-medium text-stone-700
+           hover:border-stone-300 hover:bg-stone-100
+           dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200
+           dark:hover:border-zinc-700 dark:hover:bg-zinc-800/60;
+  }
+  .btn-accent {
+    @apply border-emerald-500/40 bg-emerald-500/10 text-emerald-700
+           hover:border-emerald-500/60 hover:bg-emerald-500/15
+           dark:text-emerald-300 dark:hover:border-emerald-400/60;
+  }
+}
