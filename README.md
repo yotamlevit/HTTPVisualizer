@@ -6,6 +6,8 @@ Hover any input — the corresponding bytes light up.
 Hover any byte — the input it came from lights up.
 Every `\r\n`, every HPACK static-table index, every QUIC varint is labeled and color-coded.
 
+**[Live demo →](https://yotamlevit.github.io/HTTPVisualizer/)**
+
 ![Dark mode screenshot](docs/screenshot-dark.png)
 
 ## Why this exists
