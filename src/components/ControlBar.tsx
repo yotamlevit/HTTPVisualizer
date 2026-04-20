@@ -68,7 +68,7 @@ export const ControlBar: React.FC = () => {
           >
             RFC 9110
           </a>
-          <a className="btn" href="https://github.com" target="_blank" rel="noreferrer">
+          <a className="btn" href="https://github.com/yotamlevit/HTTPVisualizer" target="_blank" rel="noreferrer">
             <Github className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Source</span>
           </a>
